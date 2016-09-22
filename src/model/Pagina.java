@@ -54,7 +54,12 @@ public class Pagina {
     }
 
     public void modificarCita(Cita citaAntiga, Cita citaNova) {
-
+       
+        int pos=cites.indexOf(citaAntiga);
+        cites.set(pos, citaNova);
+        
+        cites.remove(citaAntiga);
+        cites.add(citaNova);
     }
 
     public ArrayList<Cita> cercarCita(int horaInici) {
